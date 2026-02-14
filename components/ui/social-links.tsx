@@ -14,7 +14,7 @@ interface SocialLinksProps extends React.HTMLAttributes<HTMLDivElement> {
 export function SocialLinks({ socials, className, ...props }: SocialLinksProps) {
   return (
     <div
-      className={cn("flex items-center gap-8", className)}
+      className={cn("flex items-center gap-6 sm:gap-8", className)}
       {...props}
     >
       {socials.map((social, index) => (
@@ -32,7 +32,7 @@ export function SocialLinks({ socials, className, ...props }: SocialLinksProps) 
             alt={social.name}
             width={32}
             height={32}
-            className="w-8 h-8"
+            className="w-7 h-7 sm:w-8 sm:h-8"
             loading="eager"
           />
         </a>

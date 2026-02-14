@@ -152,11 +152,20 @@
               box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.glass-card:hover {
-  background: rgba(22, 27, 34, 0.7);
-  border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+@media (hover: hover) {
+  .glass-card:hover {
+    background: rgba(22, 27, 34, 0.7);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (hover: none) {
+  .glass-card:active {
+    background: rgba(22, 27, 34, 0.75);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
 }
 
 .glass-card-icon {
@@ -207,4 +216,30 @@
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+/* Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .animate-marquee {
+    animation-duration: 20s;
+  }
 }
