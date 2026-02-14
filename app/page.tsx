@@ -190,7 +190,7 @@ export default function Home() {
                 borderColor: "border-emerald-500/20"
               }
             ].map((project, i) => (
-              <div key={i} className="glass-card rounded-2xl overflow-hidden h-full snap-center">
+              <div key={i} className="glass-card rounded-2xl overflow-hidden h-full snap-start">
                 <div className="p-6 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-5">
                     <div className={`w-14 h-14 rounded-xl glass-card-icon flex items-center justify-center border ${project.borderColor}`}>

@@ -36,8 +36,26 @@ export function HorizontalScroll({ children, className }: HorizontalScrollProps)
   const scroll = (direction: "left" | "right") => {
     const el = scrollRef.current
     if (!el) return
-    el.scrollBy({
-      left: direction === "left" ? -el.clientWidth : el.clientWidth,
+    const cards = Array.from(el.children) as HTMLElement[]
+    if (!cards.length) return
+
+    // Find which card is currently most visible
+    let currentIndex = 0
+    let minDistance = Infinity
+    for (let i = 0; i < cards.length; i++) {
+      const distance = Math.abs(cards[i].offsetLeft - el.scrollLeft)
+      if (distance < minDistance) {
+        minDistance = distance
+        currentIndex = i
+      }
+    }
+
+    const targetIndex = direction === "right"
+      ? Math.min(currentIndex + 1, cards.length - 1)
+      : Math.max(currentIndex - 1, 0)
+
+    el.scrollTo({
+      left: cards[targetIndex].offsetLeft,
       behavior: "smooth",
     })
   }
