@@ -306,12 +306,17 @@ export default function Home() {
               <p className="text-zinc-400">I&apos;m currently building AI products and open to new opportunities.</p>
             </div>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 w-full sm:w-auto">
-              <button className="w-full sm:w-auto px-8 py-2.5 rounded-lg border border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors text-sm font-medium flex items-center justify-center gap-2">
-                <FileText className="w-4 h-4" /> Read CV
-              </button>
               <a
-                href="/cv.html"
-                download="Muhammad_Rayyan_Mohsin_CV.html"
+                href="/Muhammad_Rayyan_Mohsin_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-2.5 rounded-lg border border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors text-sm font-medium flex items-center justify-center gap-2"
+              >
+                <FileText className="w-4 h-4" /> Read CV
+              </a>
+              <a
+                href="/Muhammad_Rayyan_Mohsin_CV.pdf"
+                download="Muhammad_Rayyan_Mohsin_CV.pdf"
                 className="w-full sm:w-auto px-8 py-2.5 rounded-lg border border-zinc-700 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors text-sm font-medium flex items-center justify-center gap-2"
               >
                 <Download className="w-4 h-4" /> Download CV
