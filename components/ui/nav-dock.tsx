@@ -8,9 +8,16 @@ export function NavDock() {
 
   const scrollTo = (target: string) => {
     if (target === "#") {
-      lenis?.scrollTo(0, { duration: 2 })
+      lenis?.scrollTo(0, {
+        duration: 1.8,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      })
     } else {
-      lenis?.scrollTo(target, { duration: 2, offset: -96 })
+      lenis?.scrollTo(target, {
+        duration: 1.8,
+        offset: -96,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      })
     }
   }
 

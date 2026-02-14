@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen">
       {/* Background Elements */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden will-change-transform">
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-no-repeat bg-center bg-cover opacity-[0.03] invert"></div>
         <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-500/10 rounded-full blur-[120px]"></div>

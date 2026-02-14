@@ -121,10 +121,22 @@
     @apply border-border outline-ring/50;
   }
 
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
   body {
     @apply bg-[#050505] text-[#e4e4e7] overflow-x-hidden;
     font-family: var(--font-inter), 'Inter', sans-serif;
   }
+}
+
+/* GPU-promote fixed/blurred elements to prevent scroll repaint */
+.fixed {
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 /* Glass Card Effect Styles */
